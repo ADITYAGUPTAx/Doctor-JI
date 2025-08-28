@@ -142,14 +142,7 @@ Output:
 * **Class Imbalance Handling**: Using `class_weight` ensures minority classes (like `df`) get properly recognized.
 * **Fine-tuning**: Gradually unfreezing deeper layers allows the model to learn skin-specific features while retaining generic image features.
 
----
 
-## 🔹 Future Improvements
-
-* Use **Focal Loss** instead of crossentropy to further handle imbalance.
-* Try **EfficientNetB3/B4** for higher accuracy.
-* Use **larger input size** (299×299 or 380×380) for finer lesion detail.
-* Deploy with **Streamlit/Flask** for a web-based prediction app.
 
 
 # CONCLUSION
