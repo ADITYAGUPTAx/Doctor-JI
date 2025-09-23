@@ -1,10 +1,10 @@
 # NIH Chest X-ray Multi-Label Classification
-**Extension of Doctor Ji (Dr. G) Project**
+**Extension of Doctor Ji Project**
 
 ---
 
 ## Project Motivation
-This project is an extension of my **Doctor Ji (Dr. G) AI-based healthcare platform**, which focuses on assisting doctors and patients in diagnosing medical conditions.
+This project is an extension of my **Doctor Ji AI-based healthcare platform**, which focuses on assisting doctors and patients in diagnosing medical conditions.
 
 Chest X-rays are commonly used to detect thoracic diseases such as **Cardiomegaly, Effusion, Pneumothorax**, and others. However, interpreting X-rays can sometimes be **confusing**, especially for doctors in rural or resource-limited areas.
 
@@ -39,4 +39,25 @@ This AI system aims to:
 
 ---
 
-## Folder Structure
+
+---
+
+## Results Summary (Example for DenseNet121)
+| Model       | Validation AUC | Test AUC | Notes |
+|------------|----------------|----------|-------|
+| DenseNet121 | 0.70          | 0.70     | Base frozen → fine-tuned last block |
+| ResNet50    | TBD           | TBD      | Planned |
+| EfficientNetB0 | TBD        | TBD      | Planned |
+| VGG16       | TBD           | TBD      | Planned |
+
+*Plots of training/validation loss and AUC curves are available in each model folder.*
+
+---
+
+## Next Steps
+- Fine-tune DenseNet fully to maximize performance.  
+- Train and compare other backbones (ResNet, EfficientNet, VGG16).  
+- Incorporate the best-performing model into the **Doctor Ji platform** for real-world testing.
+
+---
+
