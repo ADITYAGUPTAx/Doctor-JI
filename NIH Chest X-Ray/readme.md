@@ -45,7 +45,7 @@ This AI system aims to:
 ## Results Summary (Example for DenseNet121)
 | Model       | Validation AUC | Test AUC | Notes |
 |------------|----------------|----------|-------|
-| DenseNet121 | 0.70          | 0.70     | Base frozen → fine-tuned last block |
+| DenseNet121 | 0.91          | TBD    | Base frozen → fine-tuned last block |
 | ResNet50    | TBD           | TBD      | Planned |
 | EfficientNetB0 | TBD        | TBD      | Planned |
 | VGG16       | TBD           | TBD      | Planned |
