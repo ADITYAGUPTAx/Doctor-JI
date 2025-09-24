@@ -50,7 +50,6 @@ This AI system aims to:
 | EfficientNetB0 | TBD        | TBD      | Planned |
 | VGG16       | TBD           | TBD      | Planned |
 
-*Plots of training/validation loss and AUC curves are available in each model folder.*
 
 ---
 
