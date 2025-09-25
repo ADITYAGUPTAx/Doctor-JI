@@ -45,7 +45,7 @@ This AI system aims to:
 ## Results Summary
 | Model       |  Micro Test AUC | Macro Test AUC | Notes |
 |------------|----------------|----------|-------|
-| DenseNet121 | 0.89         | 0.74    | Base frozen → fine-tuned last block |
+| DenseNet121 | 0.88         | 0.72    | Base frozen → fine-tuned last block |
 | ResNet50    | 0.84           | 0.68      | Last 50 layers trained |
 | EfficientNetB0 | TBD        | TBD      | Planned |
 | VGG16       | TBD           | TBD      | Planned |
