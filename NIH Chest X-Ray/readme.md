@@ -48,7 +48,7 @@ This AI system aims to:
 | DenseNet121 | 0.88         | 0.72    | Base frozen → fine-tuned last block |
 | ResNet50    | 0.84           | 0.68      | Last 50 layers trained |
 | convNeXt-tiny | 0.80        | 0.59      | Converged in 40 epochs |
-| VGG16       | TBD           | TBD      | Planned |
+| Vit Base 16       | 0.74          | 0.65      | Planned |
 
 
 ---
