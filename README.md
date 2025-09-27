@@ -5,6 +5,7 @@ The global healthcare system grapples with challenges of accessibility, affordab
  # KEY FEATURES
 
 To address these gaps, Doctor Ji is developed as an all-inone mobile health (mHealth) application powered by artificial intelligence (AI). The app integrates:
+
 • A rule-based chatbot for health guidance and symptom analysis.
 
 • A convolutional neural network (CNN) for diagnosing skin conditions with ∼85% accuracy.
