@@ -6,8 +6,11 @@ The global healthcare system grapples with challenges of accessibility, affordab
 
 To address these gaps, Doctor Ji is developed as an all-inone mobile health (mHealth) application powered by artificial intelligence (AI). The app integrates:
 • A rule-based chatbot for health guidance and symptom analysis.
+
 • A convolutional neural network (CNN) for diagnosing skin conditions with ∼85% accuracy.
+
 • Multi-service features, including ambulance booking,doctor appointment scheduling, emergency SOS, and medical record management.
+
 Built using Flutter for seamless cross-platform performance and Firebase for robust backend services, Doctor Ji aims to provide accessible, affordable, and reliable healthcare solutions. This paper elaborates on the system’s architecture,methodology, implementation details, performance metrics, and practical applications through imaginary case studies. It also provides detailed explanations of AI concepts such as CNNs, ResNets, and activation functions to ensure clarity for diverse readers, while maintaining a professional and technical depth suitable for academic and industry audiences
 
 <img width="900" height="543" alt="Screenshot 2025-04-29 194914" src="https://github.com/user-attachments/assets/3c8cae7f-3674-4581-864d-b6a2f3613950" />
