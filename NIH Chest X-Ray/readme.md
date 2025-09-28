@@ -51,9 +51,9 @@ Chest X-rays are a frontline imaging modality for diagnosing thoracic diseases (
 |---------------------------|---------------:|---------------:|----------------------------------------------------|
 | DenseNet-121 + FiLM       |          0.882 |          0.74  | FiLM layers for metadata conditioning              |
 | DenseNet-121 (fine-tuned) |          0.877 |          0.72  | Last block unfrozen and fine-tuned                 |
-| ResNet-50                 |          0.840 |          0.68  | Last 50 layers trained                             |
-| ConvNeXt-tiny             |          0.800 |          0.59  | Promising; further tuning on larger subset planned |
-| ViT-Base-16               |          0.740 |          0.65  | Transformer baseline                               |
+| ResNet-50                 |          0.842 |          0.68  | Last 50 layers trained                             |
+| ConvNeXt-tiny             |          0.806 |          0.59  | Promising; further tuning on larger subset planned |
+| ViT-Base-16               |          0.747 |          0.65  | Transformer baseline                               |
 
 ---
 
