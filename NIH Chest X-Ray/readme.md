@@ -48,8 +48,8 @@ This AI system aims to:
 | DenseNet121 with FiLM | 0.88         | 0.74    |    Own Densenet with loaded wieghts with added FiLM layer |
 | DenseNet121 | 0.88         | 0.72    | Base frozen → fine-tuned last block |
 | ResNet50    | 0.84           | 0.68      | Last 50 layers trained |
-| convNeXt-tiny | 0.80        | 0.59      | Converged in 40 epochs |
-| Vit Base 16       | 0.74          | 0.65      | Planned |
+| convNeXt-tiny | 0.80        | 0.59      | Can be tried further on mini |
+| Vit Base 16       | 0.74          | 0.65      | Pre loaded Vit trained |
 
 
 ---
