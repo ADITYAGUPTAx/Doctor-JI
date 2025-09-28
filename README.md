@@ -186,6 +186,10 @@ Output:
 - **Training Strategy**: Progressive unfreezing with metadata conditioning
 - **Visualization**: Grad-CAM attention maps for clinical interpretability
 
+  <img width="384" height="403" alt="original sample x-ray" src="https://github.com/user-attachments/assets/46e186ad-6f29-4bc6-995f-9390277258f1" />, <img width="428" height="432" alt="Densenet with film gradcam" src="https://github.com/user-attachments/assets/4f49c5dd-af36-4158-9aaa-01d182003e23" />
+
+
+
 ## Technology Stack
 - **Frontend**: Flutter (Dart)
 - **Backend**: Firebase
