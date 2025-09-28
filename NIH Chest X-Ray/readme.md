@@ -1,63 +1,64 @@
 # NIH Chest X-ray Multi-Label Classification
+
 **Extension of Doctor Ji Project**
 
 ---
 
 ## Project Motivation
-This project is an extension of my **Doctor Ji AI-based healthcare platform**, which focuses on assisting doctors and patients in diagnosing medical conditions.
-
-Chest X-rays are commonly used to detect thoracic diseases such as **Cardiomegaly, Effusion, Pneumothorax**, and others. However, interpreting X-rays can sometimes be **confusing**, especially for doctors in rural or resource-limited areas.
-
-This AI system aims to:  
-- **Assist doctors** by providing a second opinion when reading chest X-rays.  
-- **Support families and patients** who may not have access to specialists.  
-- Serve as a **decision-support tool** to reduce misdiagnosis and improve healthcare accessibility.
+Chest X-rays are a frontline imaging modality for diagnosing thoracic diseases (e.g., **Cardiomegaly**, **Effusion**, **Pneumothorax**), yet interpretation can be challenging—especially in resource-limited settings. This extension of the Doctor Ji platform aims to:
+- **Assist clinicians** by offering an AI-driven second opinion on chest X-rays  
+- **Support patients and families** lacking specialist access  
+- **Reduce misdiagnosis** and improve healthcare equity through decision-support tools  
 
 ---
 
 ## Approach
-1. **Dataset:** NIH Chest X-ray dataset (~15,000 images for initial experiments), including metadata: Patient Age, Gender, and View Position.  
-2. **Problem:** Multi-label classification — each X-ray may have **multiple thoracic disease labels**.  
-3. **Modeling:**  
-   - Transfer learning using pre-trained CNNs: **DenseNet121, ResNet50, Vit, ConvNeXt-tiny**.  
-   - Multi-input pipeline:  
-     - **Image input:** chest X-ray images  
-     - **Tabular input:** patient metadata (age, gender, view)  
-   - Multi-hot encoding for labels.  
-   - Training pipeline includes **data augmentation, normalization, and batch processing**.  
-4. **Evaluation:**  
-   - Metrics: **AUC, Precision, Recall, F1-score** per disease  
-   - Best model selected based on **validation AUC**.  
-   - Comparison across different CNN backbones to find the most suitable architecture.
 
----
+### 1. Dataset  
+- **NIH ChestX-ray14**: Subset of ~15 000 images  
+- **Metadata**: Patient age, gender, view position  
 
-## Impact
-- Provides **decision support for doctors**, especially in rural areas.  
-- Helps **families without easy access to specialists**.  
-- Forms the foundation for **future enhancements** with more data and better fine-tuning.
+### 2. Problem Formulation  
+- **Multi-label classification**: Each image may exhibit multiple thoracic disease labels  
+- **Labels**: 14 disease categories (e.g., atelectasis, cardiomegaly, effusion, infiltration, mass, nodule, pneumonia, pneumothorax, consolidation, edema, emphysema, fibrosis, pleural thickening, hernia)  
 
----
+### 3. Modeling Pipeline  
+- **Image Input**: Preprocessed chest X-ray images (normalized, augmented)  
+- **Tabular Input**: One-hot/ordinal encoding of metadata (age binning, gender, view)  
+- **Backbone Architectures**:  
+  - DenseNet-121 with FiLM conditioning  
+  - Base DenseNet-121 (transfer-learned)  
+  - ResNet-50 (fine-tuned last 50 layers)  
+  - ConvNeXt-tiny  
+  - ViT-Base-16  
+- **Fusion Strategy**: FiLM layers inject metadata into convolutional feature maps  
+- **Training Details**:  
+  - Data augmentation (flips, rotations, contrast)  
+  - Multi-hot label vectors  
+  - Optimizer: Adam with learning-rate scheduling  
+  - Early stopping on validation AUC  
 
+### 4. Evaluation Metrics  
+- **Primary**: Micro-average AUC, Macro-average AUC  
+- **Secondary**: Precision, Recall, F1-score per label  
+- **Model Selection**: Highest validation micro-AUC  
 
 ---
 
 ## Results Summary
-| Model       |  Micro Test AUC | Macro Test AUC | Notes |
-|------------|----------------|----------|-------|
-| DenseNet121 with FiLM | 0.882         | 0.74    |    Own Densenet with loaded wieghts with added FiLM layer |
-| DenseNet121 | 0.877       | 0.72    | Base frozen → fine-tuned last block |
-| ResNet50    | 0.84          | 0.68      | Last 50 layers trained |
-| convNeXt-tiny | 0.80        | 0.59      | Can be tried further on mini |
-| Vit Base 16       | 0.74          | 0.65      | Pre loaded Vit trained |
 
+| Model                     | Micro Test AUC | Macro Test AUC | Notes                                              |
+|---------------------------|---------------:|---------------:|----------------------------------------------------|
+| DenseNet-121 + FiLM       |          0.882 |          0.74  | FiLM layers for metadata conditioning              |
+| DenseNet-121 (fine-tuned) |          0.877 |          0.72  | Last block unfrozen and fine-tuned                 |
+| ResNet-50                 |          0.840 |          0.68  | Last 50 layers trained                             |
+| ConvNeXt-tiny             |          0.800 |          0.59  | Promising; further tuning on larger subset planned |
+| ViT-Base-16               |          0.740 |          0.65  | Transformer baseline                               |
 
 ---
 
 ## Next Steps
-- Fine-tune DenseNet fully to maximize performance.  
-- Train and compare other backbones (ResNet, EfficientNet, VGG16).  
-- Incorporate the best-performing model into the **Doctor Ji platform** for real-world testing.
-
----
-
+- **Full Fine-tuning** of DenseNet-121 backbone to further boost AUC  
+- **Experiment** with additional architectures (EfficientNet, VGG16)  
+- **Integrate Best Model** into the Doctor Ji mobile platform for field validation  
+- **Expand Dataset** and metadata (clinical history, lab values) for richer multimodal learning  
