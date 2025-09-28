@@ -10,19 +10,34 @@ Doctor Ji is an AI-powered mobile healthcare platform that addresses global heal
 • **Comprehensive Healthcare Services**: Rule-based chatbot, ambulance booking, doctor appointments, emergency SOS, and medical record management
 
 Built using Flutter for cross-platform compatibility and Firebase for scalable backend services, Doctor Ji demonstrates the clinical value of multimodal AI in democratizing healthcare access.
-.
 
- # KEY FEATURES
+### 🎯 Project Impact
+- **Clinical**: Improved diagnostic accuracy through multimodal AI
+- **Technical**: Novel application of FiLM in medical imaging
+- **Social**: Democratizing healthcare access through mobile AI
+- **Academic**: Open-source research contribution to medical AI community
 
-To address these gaps, Doctor Ji is developed as an all-inone mobile health (mHealth) application powered by artificial intelligence (AI). The app integrates:
 
-• A rule-based chatbot for health guidance and symptom analysis.
+# 🚀 KEY FEATURES
 
-• A convolutional neural network (CNN) for diagnosing skin conditions with ∼85% accuracy.
+## AI-Powered Diagnostics
+- **Skin Disease Detection**: ResNet-50 based classification for 7 skin conditions (akiec, bcc, bkl, df, mel, nv, vasc)
+- **Chest X-ray Analysis**: Multimodal FiLM-augmented DenseNet-121 for 14 thoracic diseases
+- **Metadata Integration**: Patient context (age, gender, view position) incorporated via Feature-wise Linear Modulation
 
-• Multi-service features, including ambulance booking,doctor appointment scheduling, emergency SOS, and medical record management.
+## Healthcare Services
+- Rule-based health chatbot for symptom analysis
+- Ambulance booking and emergency services
+- Doctor appointment scheduling
+- Medical record management
+- Emergency SOS functionality
 
-Built using Flutter for seamless cross-platform performance and Firebase for robust backend services, Doctor Ji aims to provide accessible, affordable, and reliable healthcare solutions. This paper elaborates on the system’s architecture,methodology, implementation details, performance metrics, and practical applications through imaginary case studies. It also provides detailed explanations of AI concepts such as CNNs, ResNets, and activation functions to ensure clarity for diverse readers, while maintaining a professional and technical depth suitable for academic and industry audiences
+## Technical Excellence
+- Cross-platform Flutter mobile application
+- Firebase backend integration
+- Transfer learning with multiple CNN architectures
+- Grad-CAM visualizations for model interpretability
+- Open-source research contributions
 
 <img width="900" height="543" alt="Screenshot 2025-04-29 194914" src="https://github.com/user-attachments/assets/3c8cae7f-3674-4581-864d-b6a2f3613950" />
 
@@ -156,7 +171,27 @@ Output:
 * **Class Imbalance Handling**: Using `class_weight` ensures minority classes (like `df`) get properly recognized.
 * **Fine-tuning**: Gradually unfreezing deeper layers allows the model to learn skin-specific features while retaining generic image features.
 
+# 🛠️ IMPLEMENTATION DETAILS
 
+## Skin Disease Detection (Original)
+- **Architecture**: ResNet-50 on HAM10000 dataset
+- **Classes**: 7 dermatological conditions
+- **Performance**: ~85% accuracy with class imbalance handling
+- **Features**: Data augmentation, transfer learning, fine-tuning strategies
+
+## Chest X-ray Classification (New Research Extension)
+- **Primary Model**: DenseNet-121 + FiLM layers
+- **Dataset**: NIH ChestX-ray14 (curated 15,000 images)
+- **Multimodal Input**: Images + patient metadata (age, gender, view position)
+- **Training Strategy**: Progressive unfreezing with metadata conditioning
+- **Visualization**: Grad-CAM attention maps for clinical interpretability
+
+## Technology Stack
+- **Frontend**: Flutter (Dart)
+- **Backend**: Firebase
+- **AI/ML**: Python, TensorFlow, PyTorch
+- **Research**: Jupyter Notebooks
+- **Deployment**: Cross-platform mobile (iOS/Android)
 
 
 # CONCLUSION
