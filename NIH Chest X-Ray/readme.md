@@ -19,7 +19,7 @@ This AI system aims to:
 1. **Dataset:** NIH Chest X-ray dataset (~15,000 images for initial experiments), including metadata: Patient Age, Gender, and View Position.  
 2. **Problem:** Multi-label classification — each X-ray may have **multiple thoracic disease labels**.  
 3. **Modeling:**  
-   - Transfer learning using pre-trained CNNs: **DenseNet121, ResNet50, EfficientNetB0, VGG16**.  
+   - Transfer learning using pre-trained CNNs: **DenseNet121, ResNet50, Vit, ConvNeXt-tiny**.  
    - Multi-input pipeline:  
      - **Image input:** chest X-ray images  
      - **Tabular input:** patient metadata (age, gender, view)  
