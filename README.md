@@ -1,6 +1,16 @@
 # ABSTRACT
 
-The global healthcare system grapples with challenges of accessibility, affordability, and diagnostic accuracy, particularly in underserved regions. Doctor Ji is an AI-powered mobile application designed to address these issues by integrating a rule-based chatbot, a convolutional neural network (CNN) for skin condition diagnostics, and multi-service features such as ambulance booking, doctor appointments, emergency SOS, and medical record management. Built using Flutter for crossplatform compatibility and Firebase for scalable backend services, the app leverages the HAM10000 dataset and ResNet18 architecture to achieve ∼85% diagnostic accuracy. This paper provides an in-depth exploration of the system’s architecture, methodology, implementation, performance evaluation, and realworld applications through case studies. It also explains foundational AI concepts like CNNs, ResNets, and activation functions to ensure accessibility for non-technical readers while maintaining a professional tone. The paper concludes with challenges, limitations, and future enhancements to expand Doctor Ji’s impact in democratizing healthcare.
+
+Doctor Ji is an AI-powered mobile healthcare platform that addresses global healthcare challenges through advanced multimodal deep learning. The application integrates:
+
+• **Skin Disease Detection**: ResNet-based CNN achieving ~85% accuracy on HAM10000 dataset for dermatoscopic image classification across 7 disease categories
+
+• **Chest X-ray Analysis**: Novel FiLM-augmented DenseNet-121 framework for thoracic disease classification, incorporating patient metadata (age, gender, view position) to achieve Micro AUC of 0.882 across 14 disease categories on NIH ChestX-ray14 dataset
+
+• **Comprehensive Healthcare Services**: Rule-based chatbot, ambulance booking, doctor appointments, emergency SOS, and medical record management
+
+Built using Flutter for cross-platform compatibility and Firebase for scalable backend services, Doctor Ji demonstrates the clinical value of multimodal AI in democratizing healthcare access.
+.
 
  # KEY FEATURES
 
