@@ -55,6 +55,26 @@ Chest X-rays are a frontline imaging modality for diagnosing thoracic diseases (
 | ConvNeXt-tiny             |          0.806 |          0.59  | Promising; further tuning on larger subset planned |
 | ViT-Base-16               |          0.747 |          0.65  | Transformer baseline                               |
 
+###  Per-class AUC scores  
+
+| Disease             | ConvNeXt | ResNet-50 | DenseNet-121 | DenseNet+FiLM | ViT Base |
+|---------------------|----------|-----------|--------------|---------------|----------|
+| Atelectasis         | 0.714    | **0.791** | 0.711        | 0.722         | 0.716    |
+| Cardiomegaly        | 0.749    | **0.824** | 0.792        | **0.824**     | 0.744    |
+| Consolidation       | 0.683    | 0.683     | 0.706        | **0.731**     | 0.696    |
+| Edema               | 0.781    | 0.826     | 0.819        | 0.844         | **0.864**|
+| Effusion            | 0.797    | 0.798     | 0.798        | **0.829**     | 0.773    |
+| Emphysema           | 0.722    | 0.819     | 0.818        | **0.824**     | 0.548    |
+| Fibrosis            | 0.667    | **0.677** | 0.676        | 0.660         | 0.652    |
+| Hernia              | 0.689    | 0.863     | 0.863        | **0.918**     | –        |
+| Infiltration        | 0.638    | 0.681     | 0.654        | 0.682         | **0.696**|
+| Mass                | 0.674    | 0.686     | 0.643        | **0.687**     | 0.594    |
+| No Finding          | 0.674    | **0.713** | 0.693        | **0.713**     | 0.685    |
+| Nodule              | 0.561    | **0.581** | **0.581**    | 0.568         | 0.470    |
+| Pleural Thickening  | 0.611    | 0.654     | 0.654        | **0.687**     | 0.599    |
+| Pneumonia           | 0.507    | 0.601     | 0.601        | 0.621         | **0.659**|
+| Pneumothorax        | 0.775    | 0.796     | 0.795        | **0.808**     | 0.560    |
+
 ---
 
 ## Next Steps
